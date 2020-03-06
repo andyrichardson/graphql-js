@@ -4,7 +4,7 @@ import { GraphQLType, GraphQLCompositeType } from '../type/definition';
 /**
  * Provided two types, return true if the types are equal (invariant).
  */
-export function isEqualType(typeA: GraphQLType, typeB: GraphQLType): boolean;
+export function isEqualType<T extends GraphQLType>(typeA: GraphQLType, typeB: T): typeA is T;
 
 /**
  * Provided a type and a super type, return true if the first type is either
